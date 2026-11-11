@@ -3,78 +3,437 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Vonani Nkombyane | Graduate Software Developer</title>
+
 <style>
-:root{--bg:#0f172a;--card:#1e293b;--accent:#3b82f6;--text:#f8fafc;--muted:#cbd5e1;}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
-body{background:#020617;color:var(--text);line-height:1.7}
-header{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#020617,#0f172a,#2563eb)}
-.container{width:90%;max-width:1200px;margin:auto}
-.section{padding:80px 0}
-.card{background:rgba(30,41,59,.8);padding:25px;border-radius:18px;margin:15px 0;border:1px solid rgba(255,255,255,.08)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-h1{font-size:4rem} h2{font-size:2rem;margin-bottom:25px;color:#60a5fa}
-.btn{display:inline-block;margin:10px;padding:12px 22px;background:var(--accent);color:white;text-decoration:none;border-radius:8px}
-ul{padding-left:20px} li{margin:8px 0}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:30px}
-.stat{background:rgba(255,255,255,.1);padding:20px;border-radius:12px}
-footer{text-align:center;padding:30px;background:#0f172a}
-@media(max-width:768px){h1{font-size:2.5rem}.stats{grid-template-columns:1fr 1fr}}
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --dark-light:#1e293b;
+    --text:#f8fafc;
+    --muted:#cbd5e1;
+    --card:rgba(30,41,59,.8);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#020617;
+    color:var(--text);
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:linear-gradient(135deg,#020617,#0f172a,#2563eb);
+    padding:40px 20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:800px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:12px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    background:var(--primary);
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.stats{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+.stat{
+    background:rgba(255,255,255,.08);
+    padding:20px;
+    border-radius:10px;
+}
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    color:#60a5fa;
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:15px;
+    padding:25px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.skill-card,
+.project-card{
+    background:var(--dark-light);
+    padding:25px;
+    border-radius:12px;
+}
+
+.project-card h3{
+    color:#60a5fa;
+    margin-bottom:10px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin:8px 0;
+}
+
+.timeline{
+    border-left:3px solid var(--primary);
+    padding-left:25px;
+}
+
+.timeline-item{
+    margin-bottom:25px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0f172a;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<div class='container'>
-<h1>Vonani Nkombyane</h1>
-<p style='font-size:1.4rem'>Graduate Software Developer | C# | ASP.NET | SQL | REST APIs</p>
-<p style='max-width:800px;margin:20px auto'>Building software solutions through code, data, and enterprise systems. BSc Information Technology graduate with experience in backend development, full-stack applications, database systems, analytics, and enterprise IT environments.</p>
-<a class='btn' href='#projects'>View Projects</a>
-<a class='btn' href='mailto:nkombyanevoni@gmail.com'>Contact Me</a>
-<div class='stats'>
-<div class='stat'><h3>5+</h3><p>Technical Projects</p></div>
-<div class='stat'><h3>1+</h3><p>Years Enterprise Experience</p></div>
-<div class='stat'><h3>10+</h3><p>Technologies Used</p></div>
-<div class='stat'><h3>BSc IT</h3><p>Graduate</p></div>
-</div>
-</div>
+    <div class="hero container">
+
+        <h1>Vonani Nkombyane</h1>
+
+        <p>
+            Graduate Software Developer | C# | ASP.NET | SQL | REST APIs
+        </p>
+
+        <p style="margin-top:20px;">
+            BSc Information Technology graduate passionate about building
+            software solutions, backend systems, APIs, databases, and
+            enterprise applications.
+        </p>
+
+        <div style="margin-top:25px;">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h3>5+</h3>
+                <p>Projects</p>
+            </div>
+
+            <div class="stat">
+                <h3>1+</h3>
+                <p>Years Enterprise Experience</p>
+            </div>
+
+            <div class="stat">
+                <h3>10+</h3>
+                <p>Technologies</p>
+            </div>
+
+            <div class="stat">
+                <h3>BSc IT</h3>
+                <p>Graduate</p>
+            </div>
+
+        </div>
+
+    </div>
 </header>
-<section class='section'><div class='container'>
-<h2>About Me</h2>
-<div class='card'>I am a BSc Information Technology graduate from North-West University currently working as an IT Graduate at Adcock Ingram. My background combines software development, database design, REST APIs, business intelligence, system analysis, testing, and enterprise systems support. I am actively seeking opportunities as a Graduate Software Developer, Junior Software Engineer, Backend Developer, or Application Developer.</div>
-</div></section>
-<section class='section'><div class='container'>
-<h2>Technical Skills</h2>
-<div class='grid'>
-<div class='card'><h3>Programming</h3><ul><li>C#</li><li>Java</li><li>Python</li><li>JavaScript</li><li>C++</li></ul></div>
-<div class='card'><h3>Web & Backend</h3><ul><li>ASP.NET</li><li>REST APIs</li><li>HTML5</li><li>CSS3</li><li>Angular</li></ul></div>
-<div class='card'><h3>Databases</h3><ul><li>SQL Server</li><li>Oracle</li><li>MongoDB</li><li>Supabase</li></ul></div>
-<div class='card'><h3>Tools</h3><ul><li>GitHub</li><li>Visual Studio</li><li>VS Code</li><li>Power BI</li><li>Apache Kafka</li></ul></div>
-</div></div></section>
-<section id='projects' class='section'><div class='container'>
-<h2>Featured Projects</h2>
-<div class='grid'>
-<div class='card'><h3>Recode - Intelligent Learning Support System</h3><p><strong>Python | REST API | RBAC</strong></p><ul><li>Developed RESTful API endpoints.</li><li>Implemented role-based access control.</li><li>Secured backend resources.</li><li>Worked with frontend integration.</li></ul></div>
-<div class='card'><h3>Rental Company Management System</h3><p><strong>C# | ASP.NET | SQL</strong></p><ul><li>Built a full-stack system.</li><li>Created SQL database structures.</li><li>Developed responsive interfaces.</li><li>Implemented business logic.</li></ul></div>
-<div class='card'><h3>Business Intelligence Analytics</h3><p><strong>MongoDB | Kafka | Power BI</strong></p><ul><li>Designed NoSQL reporting solution.</li><li>Implemented data streaming.</li><li>Built dashboards.</li><li>Performed analytics.</li></ul></div>
-<div class='card'><h3>C# GUI Applications</h3><p><strong>Windows Forms</strong></p><ul><li>Desktop calculators.</li><li>Simulation applications.</li><li>Data-entry systems.</li><li>Event-driven programming.</li></ul></div>
-</div></div></section>
-<section class='section'><div class='container'>
-<h2>Professional Experience</h2>
-<div class='card'><h3>IT Graduate | Adcock Ingram</h3><ul><li>Requirements gathering and analysis.</li><li>Functional testing.</li><li>Enterprise systems support.</li><li>Issue resolution.</li><li>System integrations and documentation.</li></ul></div>
-</div></section>
-<section class='section'><div class='container'>
-<h2>Education</h2>
-<div class='card'><h3>BSc Information Technology</h3><p>North-West University (2023-2025)</p></div>
-</div></section>
-<section class='section'><div class='container'>
-<h2>Contact</h2>
-<div class='card'>
-<p>Email: nkombyanevoni@gmail.com</p>
-<p>Phone: 071 418 5289</p>
-<p>LinkedIn: linkedin.com/in/vonani-nkombyane-470832344</p>
-<p>GitHub: github.com/VonaniNkombyane-stack</p>
-</div>
-</div></section>
-<footer>© 2026 Vonani Nkombyane | Graduate Software Developer</footer>
+
+<section id="about">
+    <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="card">
+            <p>
+                I am a BSc Information Technology graduate from
+                North-West University currently working as an IT Graduate
+                at Adcock Ingram. My experience includes enterprise systems,
+                requirements analysis, software testing, documentation,
+                database technologies and system integration.
+            </p>
+
+            <br>
+
+            <p>
+                My academic background provided hands-on software
+                development experience using C#, ASP.NET, Java, Python,
+                JavaScript, SQL Server, Oracle, MongoDB and REST APIs.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="grid">
+
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <ul>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Web & Backend</h3>
+                <ul>
+                    <li>ASP.NET</li>
+                    <li>REST APIs</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Angular</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Databases</h3>
+                <ul>
+                    <li>SQL Server</li>
+                    <li>Oracle</li>
+                    <li>MongoDB</li>
+                    <li>Supabase</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools</h3>
+                <ul>
+                    <li>GitHub</li>
+                    <li>Visual Studio</li>
+                    <li>VS Code</li>
+                    <li>Power BI</li>
+                    <li>Apache Kafka</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="grid">
+
+            <div class="project-card">
+                <h3>Recode Intelligent Learning Support System</h3>
+
+                <p><strong>Python • REST APIs • RBAC</strong></p>
+
+                <ul>
+                    <li>Developed RESTful API endpoints.</li>
+                    <li>Implemented Role-Based Access Control.</li>
+                    <li>Secured backend resources.</li>
+                    <li>Integrated frontend and backend services.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Rental Company Management System</h3>
+
+                <p><strong>C# • ASP.NET • SQL</strong></p>
+
+                <ul>
+                    <li>Built a full-stack rental application.</li>
+                    <li>Created SQL database structures.</li>
+                    <li>Developed responsive interfaces.</li>
+                    <li>Implemented business logic.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Business Intelligence Analytics</h3>
+
+                <p><strong>MongoDB • Kafka • Power BI</strong></p>
+
+                <ul>
+                    <li>Designed NoSQL reporting solutions.</li>
+                    <li>Implemented data streaming.</li>
+                    <li>Created interactive dashboards.</li>
+                    <li>Performed reporting analytics.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>C# Desktop Applications</h3>
+
+                <p><strong>Windows Forms</strong></p>
+
+                <ul>
+                    <li>Calculator applications.</li>
+                    <li>Simulation systems.</li>
+                    <li>Data capture solutions.</li>
+                    <li>Event-driven programming.</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="experience">
+    <div class="container">
+
+        <h2 class="section-title">Experience</h2>
+
+        <div class="card timeline">
+
+            <div class="timeline-item">
+                <h3>IT Graduate - Adcock Ingram</h3>
+
+                <p>April 2026 - Present</p>
+
+                <ul>
+                    <li>Requirements gathering and analysis.</li>
+                    <li>Functional testing.</li>
+                    <li>Enterprise systems support.</li>
+                    <li>Application troubleshooting.</li>
+                    <li>System integration activities.</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="education">
+    <div class="container">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="card">
+            <h3>BSc Information Technology</h3>
+            <p>North-West University</p>
+            <p>2023 - 2025</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+
+        <h2 class="section-title">Contact</h2>
+
+        <div class="card contact">
+
+            <p>📧 nkombyanevoni@gmail.com</p>
+            <p>📱 071 418 5289</p>
+
+            <p>
+                <a href="https://github.com/VonaniNkombyane-stack"
+                   style="color:#60a5fa;">
+                   GitHub
+                </a>
+            </p>
+
+            <p>
+                <a href="https://linkedin.com/in/vonani-nkombyane-470832344"
+                   style="color:#60a5fa;">
+                   LinkedIn
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Vonani Nkombyane | Graduate Software Developer
+</footer>
+
 </body>
 </html>
